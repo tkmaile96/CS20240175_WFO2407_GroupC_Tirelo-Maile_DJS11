@@ -1,5 +1,5 @@
 # PODCAST APP 💿
-[DJS11] Starter Code for the Final Portfolio Piece Submission
+[DJS11] Instructions for the Final Portfolio Piece Submission
 
 
 <!-- omit in toc -->

@@ -130,39 +130,60 @@ Each completed story that is verified by code coach will result in you receiving
 - ✅ All metatag information has been creataed and added via [https://metatags.io/](https://metatags.io/) (You are welcome to use any free image you find on [https://unsplash.com/](https://unsplash.com/)). Be mindful to manually replace all URL values (especially image URL) to absolute Netlify URL values (you will need to deploy to Netlify first)
 
 ---
+To remove the "CHECK IF ACHIEVED" column and add a ✅ emoji before each individual user story, you can modify the table like this:
 
-| CODE | CATEGORY                          | USER STORIES                                                                                          | DIFFICULTY | CHECK IF ACHIEVED | TOTAL |
-|------|-----------------------------------|------------------------------------------------------------------------------------------------------|------------|-------------------|-------|
-| P3.1 | Setup and Deployment              | Project is deployed to a custom Netlify URL                                                          | Medium     | FALSE             | 2     |
-| P3.2 |                                   | All views in the app display correctly on the smallest mobile devices available "iPhone SE".         | Hard       | FALSE             | 3     |
-| P3.3 |                                   | All favicon information has been created and added correctly                                         | Easy       | FALSE             | 1     |
-| P3.4 |                                   | All metatag information has been created and added                                                   | Easy       | FALSE             | 1     |
-| P3.5 | UI/UX                             | User sees the name of all available shows on the platform                                            | Easy       | FALSE             | 1     |
-| P3.6 |                                   | User sees shows broken down into seasons, sorted by number                                           | Hard       | FALSE             | 3     |
-| P3.7 |                                   | User has a way to listen to any episode in a season for a show                                       | Medium     | FALSE             | 2     |
-| P3.8 |                                   | User is able to see a view where only episodes for a specific selected season are shown              | Medium     | FALSE             | 2     |
-| P3.9 |                                   | User is able to toggle between different seasons for the same show                                   | Hard       | FALSE             | 3     |
-| P3.10|                                   | User sees preview image of shows when browsing                                                       | Easy       | FALSE             | 1     |
-| P3.11|                                   | User sees the amount of seasons as a number in a show when browsing                                  | Easy       | FALSE             | 1     |
-| P3.12|                                   | User sees a human-readable date to when a show was last updated                                      | Easy       | FALSE             | 1     |
-| P3.13|                                   | User sees what genres (as genre titles) a show is associated with when browsing                      | Medium     | FALSE             | 2     |
-| P3.14|                                   | User sees a preview image of seasons for a specific show                                             | Easy       | FALSE             | 1     |
-| P3.15|                                   | User sees the amount of episodes as a number for a season                                            | Easy       | FALSE             | 1     |
-| P3.16|                                   | User is able to go back to a show view from a season-specific view                                   | Easy       | FALSE             | 1     |
-| P3.17| Data Fetching and State Management| All show data loaded via a fetch call from the API                                                   | Medium     | FALSE             | 2     |
-| P3.18|                                   | All data is loaded via a fetch and no endpoint-specific data is hardcoded                            | Medium     | FALSE             | 2     |
-| P3.19|                                   | When viewing a specific show, data is loaded via fetch from individual show endpoint                 | Medium     | FALSE             | 2     |
-| P3.20|                                   | There is a loading state while initial data is being loaded                                          | Medium     | FALSE             | 2     |
-| P3.21|                                   | There is a loading state while new data is being loaded                                              | Hard       | FALSE             | 3     |
-| P3.22| User Interaction                  | User is able to mark specific episodes as favourites so that they can find them again                | Hard       | FALSE             | 3     |
-| P3.23|                                   | User can visit a view where they see all their favourites                                            | Medium     | FALSE             | 2     |
-| P3.24|                                   | User is able to see the associated show and season when an episode is in favourites                  | Medium     | FALSE             | 2     |
-| P3.25|                                   | Related by season/show episodes are grouped together in favourites                                  | Medium     | FALSE             | 2     |
-| P3.26|                                   | User is able to remove episodes from their favourites                                                | Medium     | FALSE             | 2     |
-| P3.27|                                   | User is able to arrange lists of shows based on title from A-Z                                       | Medium     | FALSE             | 2     |
-| P3.28|                                   | User is able to arrange lists of shows based on title from Z-A                                       | Medium     | FALSE             | 2     |
-| P3.29|                                   | User is able to arrange list showing the most recently updated                                       | Medium     | FALSE             | 2     |
-| P3.30|                                   | User is able to arrange list of shows from least recently updated                                    | Medium     | FALSE             | 2     |
-| P3.31|                                   | User sees the date and time that they added something as a favourite                                 | Medium     | FALSE             | 2     |
-| P3.32|                                   | User is able to arrange favourites based on title from A-Z                                           | Medium     | FALSE             | 2     |
+| CODE | CATEGORY                          | USER STORIES                                                                                          | DIFFICULTY | TOTAL |
+|------|-----------------------------------|------------------------------------------------------------------------------------------------------|------------|-------|
+| P3.1 | Setup and Deployment              | ✅ Project is deployed to a custom Netlify URL                                                          | Medium     | 2     |
+| P3.2 |                                   | ✅ All views in the app display correctly on the smallest mobile devices available "iPhone SE".         | Hard       | 3     |
+| P3.3 |                                   | ✅ All favicon information has been created and added correctly                                         | Easy       | 1     |
+| P3.4 |                                   | ✅ All metatag information has been created and added                                                   | Easy       | 1     |
+| P3.5 | UI/UX                             | ✅ User sees the name of all available shows on the platform                                            | Easy       | 1     |
+| P3.6 |                                   | ✅ User sees shows broken down into seasons, sorted by number                                           | Hard       | 3     |
+| P3.7 |                                   | ✅ User has a way to listen to any episode in a season for a show                                       | Medium     | 2     |
+| P3.8 |                                   | ✅ User is able to see a view where only episodes for a specific selected season are shown              | Medium     | 2     |
+| P3.9 |                                   | ✅ User is able to toggle between different seasons for the same show                                   | Hard       | 3     |
+| P3.10|                                   | ✅ User sees preview image of shows when browsing                                                       | Easy       | 1     |
+| P3.11|                                   | ✅ User sees the amount of seasons as a number in a show when browsing                                  | Easy       | 1     |
+| P3.12|                                   | ✅ User sees a human-readable date to when a show was last updated                                      | Easy       | 1     |
+| P3.13|                                   | ✅ User sees what genres (as genre titles) a show is associated with when browsing                      | Medium     | 2     |
+| P3.14|                                   | ✅ User sees a preview image of seasons for a specific show                                             | Easy       | 1     |
+| P3.15|                                   | ✅ User sees the amount of episodes as a number for a season                                            | Easy       | 1     |
+| P3.16|                                   | ✅ User is able to go back to a show view from a season-specific view                                   | Easy       | 1     |
+| P3.17| Data Fetching and State Management| ✅ All show data loaded via a fetch call from the API                                                   | Medium     | 2     |
+| P3.18|                                   | ✅ All data is loaded via a fetch and no endpoint-specific data is hardcoded                            | Medium     | 2     |
+| P3.19|                                   | ✅ When viewing a specific show, data is loaded via fetch from individual show endpoint                 | Medium     | 2     |
+| P3.20|                                   | ✅ There is a loading state while initial data is being loaded                                          | Medium     | 2     |
+| P3.21|                                   | ✅ There is a loading state while new data is being loaded                                              | Hard       | 3     |
+| P3.22| User Interaction                  | ✅ User is able to mark specific episodes as favourites so that they can find them again                | Hard       | 3     |
+| P3.23|                                   | ✅ User can visit a view where they see all their favourites                                            | Medium     | 2     |
+| P3.24|                                   | ✅ User is able to see the associated show and season when an episode is in favourites                  | Medium     | 2     |
+| P3.25|                                   | ✅ Related by season/show episodes are grouped together in favourites                                  | Medium     | 2     |
+| P3.26|                                   | ✅ User is able to remove episodes from their favourites                                                | Medium     | 2     |
+| P3.27|                                   | ✅ User is able to arrange lists of shows based on title from A-Z                                       | Medium     | 2     |
+| P3.28|                                   | ✅ User is able to arrange lists of shows based on title from Z-A                                       | Medium     | 2     |
+| P3.29|                                   | ✅ User is able to arrange list showing the most recently updated                                       | Medium     | 2     |
+| P3.30|                                   | ✅ User is able to arrange list of shows from least recently updated                                    | Medium     | 2     |
+| P3.31|                                   | ✅ User sees the date and time that they added something as a favourite                                 | Medium     | 2     |
+| P3.32|                                   | ✅ User is able to arrange favourites based on title from A-Z                                           | Medium     | 2     |
+| P3.33|                                   | ✅ User is able to arrange favourites based on title from Z-A                                           | Medium     | 2     |
+| P3.34|                                   | ✅ User is able to arrange favourites starting with the most recently updated                           | Medium     | 2     |
+| P3.35|                                   | ✅ User is able to arrange favourites starting with the furthest back updated                           | Medium     | 2     |
+| P3.36|                                   | ✅ Audio player is always visible so that user can listen to episodes while browsing                    | Medium     | 2     |
+| P3.37|                                   | ✅ User receives a notification that confirms they want to close the page when audio is playing         | Medium     | 2     |
+| P3.38|                                   | ✅ Automatically filters shows by a genre if the genre label is clicked on                              | Hard       | 3     |
+| P3.39| Persistence and Storage           | ✅ App remembers and shows what episodes user listened to all the way through                           | Medium     | 2     |
+| P3.40|                                   | ✅ User has the option to "reset" all their progress, effectively removing their listening history      | Medium     | 2     |
+| P3.41| Overall Assessment                | ✅ The project has a good appearance and layout when opened in a web browser                            | Easy       | 3     |
+| P3.42|                                   | ✅ The project is easy to navigate and interact with through a web browser                              | Easy       | 3     |
+| P3.43|                                   | ✅ The project's commit history shows short and clear commit messages                                   | Easy       | 3     |
+| P3.44|                                   | ✅ The project displays well on different devices and screen sizes                                      | Easy       | 3     |
+| P3.45|                                   | ✅ The README file includes a comprehensive introduction to the project, setup instructions, and contact| Easy       | 3     |
+| P3.46| Additional Features               | ✅ User is presented with a sliding carousel of possible shows they might be
+
+ interested in on the landing page | Hard   | 3     |
+| P3.47|                                   | ✅ User is able to filter shows based on title by means of a text input                                 | Hard       | 3     |
+| P3.48|                                   | ✅ User is able to find shows based on fuzzy matching of concepts                                       | Hard       | 3     |
+| P3.49|                                   | ✅ App remembers and shows the exact timestamp location of where they left off any episode              | Hard       | 3     |
+| P3.50|                                   | ✅ The project has extra features that make for a good user-experience besides the stretch goals        | Hard       | 3     |
 | P3.33|                                   | User is able to arrange favourites based on title from Z-A                                          

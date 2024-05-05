@@ -180,9 +180,7 @@ To remove the "CHECK IF ACHIEVED" column and add a ✅ emoji before each individ
 | P3.43|                                   | ✅ The project's commit history shows short and clear commit messages                                   | Easy       | 3     |
 | P3.44|                                   | ✅ The project displays well on different devices and screen sizes                                      | Easy       | 3     |
 | P3.45|                                   | ✅ The README file includes a comprehensive introduction to the project, setup instructions, and contact| Easy       | 3     |
-| P3.46| Additional Features               | ✅ User is presented with a sliding carousel of possible shows they might be
-
- interested in on the landing page | Hard   | 3     |
+| P3.46| Additional Features               | ✅ User is presented with a sliding carousel of possible shows they might be interested in on the landing page | Hard   | 3     |
 | P3.47|                                   | ✅ User is able to filter shows based on title by means of a text input                                 | Hard       | 3     |
 | P3.48|                                   | ✅ User is able to find shows based on fuzzy matching of concepts                                       | Hard       | 3     |
 | P3.49|                                   | ✅ App remembers and shows the exact timestamp location of where they left off any episode              | Hard       | 3     |

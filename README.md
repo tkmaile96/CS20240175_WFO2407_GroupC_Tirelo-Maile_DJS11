@@ -1,8 +1,6 @@
-# StudentNo_Classcode_Group_Name-Surname_DJS11
+# PODCAST APP 💿
 [DJS11] Starter Code for the Final Portfolio Piece Submission
 
-<!-- omit in toc -->
-# Example Podcast API
 
 <!-- omit in toc -->
 **Table of Contents**

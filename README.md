@@ -14,9 +14,9 @@
 
 ## 🤖 Technology
 
-**You will be required to complete this project with in React, it is strongly advised that you use React and/or build-process to manage all complexity involved.** 
+**You will be required to complete this project using React and a build-process to manage all the complexity involved.** 
 
-You are welcome to use any other technology set that you are comfortable with as well as React. It is recommended that you use TypeScript as well, however you are welcome to avoid TypeScript entirely if you do not feel comfortable with it’s usage just yet.
+You are welcome to use any other technology that you are comfortable with as well as React. It is recommended that you use TypeScript as well, however you are welcome to avoid TypeScript entirely if you do not feel comfortable with it’s usage just yet.
 
 ## 📦Data
 

@@ -131,6 +131,7 @@ Each completed story that is verified by code coach will result in you receiving
 
 ---
 To remove the "CHECK IF ACHIEVED" column and add a ✅ emoji before each individual user story, you can modify the table like this:
+To remove the "CHECK IF ACHIEVED" column and add a ✅ emoji before each individual user story, you can modify the table like this:
 
 | CODE | CATEGORY                          | USER STORIES                                                                                          | DIFFICULTY | TOTAL |
 |------|-----------------------------------|------------------------------------------------------------------------------------------------------|------------|-------|
@@ -185,5 +186,4 @@ To remove the "CHECK IF ACHIEVED" column and add a ✅ emoji before each individ
 | P3.47|                                   | ✅ User is able to filter shows based on title by means of a text input                                 | Hard       | 3     |
 | P3.48|                                   | ✅ User is able to find shows based on fuzzy matching of concepts                                       | Hard       | 3     |
 | P3.49|                                   | ✅ App remembers and shows the exact timestamp location of where they left off any episode              | Hard       | 3     |
-| P3.50|                                   | ✅ The project has extra features that make for a good user-experience besides the stretch goals        | Hard       | 3     |
-| P3.33|                                   | User is able to arrange favourites based on title from Z-A                                          
+| P3.50|                                   | ✅ The project has extra features that make for a good user-experience besides the stretch goals        | Hard       | 3     |  

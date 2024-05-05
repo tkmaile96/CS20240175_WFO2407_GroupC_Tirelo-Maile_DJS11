@@ -1,5 +1,5 @@
-# PODCAST APP 💿
-[DJS11] Instructions for the Final Portfolio Piece Submission
+# 🎵 PODCAST APP 💿
+[DJS11] Starter Instructions for the Final Portfolio Piece Submission 🚀
 
 
 <!-- omit in toc -->

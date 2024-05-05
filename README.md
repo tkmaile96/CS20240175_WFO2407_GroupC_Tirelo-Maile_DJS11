@@ -131,3 +131,38 @@ Each completed story that is verified by code coach will result in you receiving
 
 ---
 
+| CODE | CATEGORY                          | USER STORIES                                                                                          | DIFFICULTY | CHECK IF ACHIEVED | TOTAL |
+|------|-----------------------------------|------------------------------------------------------------------------------------------------------|------------|-------------------|-------|
+| P3.1 | Setup and Deployment              | Project is deployed to a custom Netlify URL                                                          | Medium     | FALSE             | 2     |
+| P3.2 |                                   | All views in the app display correctly on the smallest mobile devices available "iPhone SE".         | Hard       | FALSE             | 3     |
+| P3.3 |                                   | All favicon information has been created and added correctly                                         | Easy       | FALSE             | 1     |
+| P3.4 |                                   | All metatag information has been created and added                                                   | Easy       | FALSE             | 1     |
+| P3.5 | UI/UX                             | User sees the name of all available shows on the platform                                            | Easy       | FALSE             | 1     |
+| P3.6 |                                   | User sees shows broken down into seasons, sorted by number                                           | Hard       | FALSE             | 3     |
+| P3.7 |                                   | User has a way to listen to any episode in a season for a show                                       | Medium     | FALSE             | 2     |
+| P3.8 |                                   | User is able to see a view where only episodes for a specific selected season are shown              | Medium     | FALSE             | 2     |
+| P3.9 |                                   | User is able to toggle between different seasons for the same show                                   | Hard       | FALSE             | 3     |
+| P3.10|                                   | User sees preview image of shows when browsing                                                       | Easy       | FALSE             | 1     |
+| P3.11|                                   | User sees the amount of seasons as a number in a show when browsing                                  | Easy       | FALSE             | 1     |
+| P3.12|                                   | User sees a human-readable date to when a show was last updated                                      | Easy       | FALSE             | 1     |
+| P3.13|                                   | User sees what genres (as genre titles) a show is associated with when browsing                      | Medium     | FALSE             | 2     |
+| P3.14|                                   | User sees a preview image of seasons for a specific show                                             | Easy       | FALSE             | 1     |
+| P3.15|                                   | User sees the amount of episodes as a number for a season                                            | Easy       | FALSE             | 1     |
+| P3.16|                                   | User is able to go back to a show view from a season-specific view                                   | Easy       | FALSE             | 1     |
+| P3.17| Data Fetching and State Management| All show data loaded via a fetch call from the API                                                   | Medium     | FALSE             | 2     |
+| P3.18|                                   | All data is loaded via a fetch and no endpoint-specific data is hardcoded                            | Medium     | FALSE             | 2     |
+| P3.19|                                   | When viewing a specific show, data is loaded via fetch from individual show endpoint                 | Medium     | FALSE             | 2     |
+| P3.20|                                   | There is a loading state while initial data is being loaded                                          | Medium     | FALSE             | 2     |
+| P3.21|                                   | There is a loading state while new data is being loaded                                              | Hard       | FALSE             | 3     |
+| P3.22| User Interaction                  | User is able to mark specific episodes as favourites so that they can find them again                | Hard       | FALSE             | 3     |
+| P3.23|                                   | User can visit a view where they see all their favourites                                            | Medium     | FALSE             | 2     |
+| P3.24|                                   | User is able to see the associated show and season when an episode is in favourites                  | Medium     | FALSE             | 2     |
+| P3.25|                                   | Related by season/show episodes are grouped together in favourites                                  | Medium     | FALSE             | 2     |
+| P3.26|                                   | User is able to remove episodes from their favourites                                                | Medium     | FALSE             | 2     |
+| P3.27|                                   | User is able to arrange lists of shows based on title from A-Z                                       | Medium     | FALSE             | 2     |
+| P3.28|                                   | User is able to arrange lists of shows based on title from Z-A                                       | Medium     | FALSE             | 2     |
+| P3.29|                                   | User is able to arrange list showing the most recently updated                                       | Medium     | FALSE             | 2     |
+| P3.30|                                   | User is able to arrange list of shows from least recently updated                                    | Medium     | FALSE             | 2     |
+| P3.31|                                   | User sees the date and time that they added something as a favourite                                 | Medium     | FALSE             | 2     |
+| P3.32|                                   | User is able to arrange favourites based on title from A-Z                                           | Medium     | FALSE             | 2     |
+| P3.33|                                   | User is able to arrange favourites based on title from Z-A                                          

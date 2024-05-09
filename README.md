@@ -115,7 +115,7 @@ Since genre information is only exposed on `PREVIEW` by means of the specific `G
 
 ## 🧑 User Stories
 
-Please refer to the DJS rubric found in your dashboard spreadsheet for user stories and marking details. 
+Please refer to the DJS rubric found in your dashboard spreadsheet for more detail. 
 
 # CORE PROJECT REQUIREMENTS ✅
 

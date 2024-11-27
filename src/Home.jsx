@@ -8,6 +8,7 @@ const Home = ({ searchTerm, selectedGenre }) => {
 
     const [shows, setShows] = useState([]); // initialise an empty array to store the shows data
     const [filteredShows, setFilteredShows] = useState([]); // initialise an empty array to store the filtered shows data
+    const [loading, setLoading] = useState(false); // initialise a boolean to track the loading state
 
     // Fetch the shows data from the API 
     useEffect(() => {
@@ -20,10 +21,14 @@ const Home = ({ searchTerm, selectedGenre }) => {
                 setFilteredShows(data); // initialise filtered shows
             } catch (error) {
                 console.error("Error fetching shows", error);
+            } finally {
+                setLoading(false); // set loading to false after fetching data
             }
         };
         fetchShows(); // call the fetchShows function
     }, []); // run the fetchShows function only once 
+
+    if (loading) return <div className="text-center">Loading...</div>;// display a loading message if the data is being fetched
 
     //Update filtered shows whenever search or filter changes
     useEffect(() => {

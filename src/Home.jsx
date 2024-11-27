@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';// import useState and useEffect from the React library
 import { Link } from 'react-router-dom';// import Link from the react-router-dom library
-import '../components/Home.css' // import the CSS file for the Home component
+
 
 
 

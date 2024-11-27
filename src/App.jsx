@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home"; // Correct if Home.jsx is in src/
-import "./components/Styles/global.css"; // Adjusted path for global.css
-import Header from "./components/Header"; // Correct path for Header.jsx
-import Sidebar from "./components/Sidebar"; // Correct path for Sidebar.jsx
-import ShowDetails from "./components/Pages/ShowDetails"; // Correct if ShowDetails.jsx is in components/Pages/
-import Favorites from "./components/Pages/Favorites"; // Correct if Favorites.jsx is in components/Pages/
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // import BrowserRouter and Routes from react-router-dom
+import Home from "./Home"; // import Home component
+import "./components/Styles/global.css"; // import global.css
+import Header from "./components/Header"; // import Header component
+import Sidebar from "./components/Sidebar"; // import Sidebar component
+import ShowDetails from "./components/Pages/ShowDetails"; // import ShowDetails component
+import Favorites from "./components/Pages/Favorites"; // import Favorites component
 
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("");
+  const [searchTerm, setSearchTerm] = useState(""); // declare state variable searchTerm and initialize it with an empty string
+  const [selectedGenre, setSelectedGenre] = useState(""); // declare state variable selectedGenre and initialize it with an empty string
 
   return (
     <Router>

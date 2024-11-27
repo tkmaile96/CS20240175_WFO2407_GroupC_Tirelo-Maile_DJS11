@@ -34,6 +34,12 @@ const Header = ({ onSearch, onGenreChange}) => {
         if (onSearch) onSearch(value); // Call the onSearch function with the current search term
     }
 
+    // Handle genre selection
+  const handleGenreSelect = (e) => {
+    const genre = e.target.value;
+    if (onGenreChange) onGenreChange(genre);
+  };
+
     return (
         <header>
             <div className="header-container">
@@ -55,16 +61,17 @@ const Header = ({ onSearch, onGenreChange}) => {
                 </div>
 
                 {/* Filter By Genre */}
-                <div>
-                    <select onChange={handleGenreSelect} className="genre-select">
-                        <option value="">Select Genre</option>
-                        {genres.map((genre) => (
-                            <option key={genre} value={genre}>
-                                {genre}
-                            </option>
-                        ))}
-                    </select>
-                </div>
+                <div className="header-genre">
+          <select onChange={handleGenreSelect} className="genre-select">
+            <option value="">Select Genre</option>
+            {genres.map((genre) => (
+              <option key={genre} value={genre}>
+                {genre}
+              </option>
+                
+            ))}
+          </select>
+        </div>
 
                 {/* Navigation Links */}
                 <div className="header-links">

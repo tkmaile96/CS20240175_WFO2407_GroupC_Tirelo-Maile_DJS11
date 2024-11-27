@@ -19,6 +19,8 @@ const Home = ({ searchTerm, selectedGenre }) => {
 
                 setShows(data);
                 setFilteredShows(data); // initialise filtered shows
+               
+                
             } catch (error) {
                 console.error("Error fetching shows", error);
             } finally {
@@ -28,7 +30,8 @@ const Home = ({ searchTerm, selectedGenre }) => {
         fetchShows(); // call the fetchShows function
     }, []); // run the fetchShows function only once 
 
-    if (loading) return <div className="text-center">Loading...</div>;// display a loading message if the data is being fetched
+    
+    
 
     //Update filtered shows whenever search or filter changes
     useEffect(() => {
@@ -44,13 +47,19 @@ const Home = ({ searchTerm, selectedGenre }) => {
         //Filter by genre
         if(selectedGenre) {
             filtered = filtered.filter((show) =>
-            show.genres.include(Number(selectedGenre))
+            show.genres.includes(Number(selectedGenre))
             )
         }
         setFilteredShows(filtered); // update filtered shows
 
     }, [searchTerm, selectedGenre, shows]); // run the effect whenever searchInput, selectedGenre
+    
+    if (loading) return <div className="text-center">Loading...</div>;// display a loading message if the data is being fetched
 
+    if (!filteredShows.length && !loading) {
+        return <div className="text-center">No shows found.</div>; // display a message if no shows are found
+    }
+    
 
     return (
         <div className="home">

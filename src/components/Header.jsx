@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect from React
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import headphones from '../assets/streaming.png';  // logo image
+import './Header.css'
 
 
 const Header = ({ onSearch, onGenreChange}) => {

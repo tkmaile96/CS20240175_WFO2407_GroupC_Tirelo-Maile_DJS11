@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';// import Link from the react-router-dom
 
 
 
-const Home = ({ searchTerm, selectedGenre }) => {
+const Home = ({ searchShow, selectGenre }) => {
 
     const [shows, setShows] = useState([]); // initialise an empty array to store the shows data
     const [filteredShows, setFilteredShows] = useState([]); // initialise an empty array to store the filtered shows data
@@ -22,7 +22,7 @@ const Home = ({ searchTerm, selectedGenre }) => {
                
                 
             } catch (error) {
-                console.error("Error fetching shows", error);
+                console.error("Try Again🥲", error);
             } finally {
                 setLoading(false); // set loading to false after fetching data
             }
@@ -38,26 +38,29 @@ const Home = ({ searchTerm, selectedGenre }) => {
         let filtered = shows;
 
         //Filter by search input
-        if (searchTerm) {
+        if (searchShow) {
             filtered = filtered.filter((show) =>
-            show.title.toLowerCase().includes(searchTerm.toLowerCase())
+            show.title.toLowerCase().includes(searchShow.toLowerCase())
             )
         }
 
         //Filter by genre
-        if(selectedGenre) {
+        if(selectGenre) {
             filtered = filtered.filter((show) =>
-            show.genres.includes(Number(selectedGenre))
+            show.genres.includes(Number(selectGenre))
             )
         }
         setFilteredShows(filtered); // update filtered shows
 
-    }, [searchTerm, selectedGenre, shows]); // run the effect whenever searchInput, selectedGenre
+    }, [searchShow, selectGenre, shows]); // run the effect whenever searchInput, selectedGenre
     
-    if (loading) return <div className="text-center">Loading...</div>;// display a loading message if the data is being fetched
+    if (loading) return <div className="text-center">No Data is availabe at the Moment🥲</div>;// display a loading message if the data is being fetched
 
     if (!filteredShows.length && !loading) {
-        return <div className="text-center">Loading.....</div>; // display a message if no shows are found
+        return <div className="text-center">
+            <img src="https://media.giphy.com/media/nXf7yRHNGFPMOV79uz/giphy.gif?cid=ecf05e47d79i8hn1u95p4w1l61t595aze4e7a0e4spsp6zlq&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Cool GIF" />
+
+        </div>; // display a message if no shows are found
     }
     
 

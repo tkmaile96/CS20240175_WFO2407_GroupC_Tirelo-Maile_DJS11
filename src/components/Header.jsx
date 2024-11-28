@@ -7,7 +7,7 @@ import './Header.css'; // Import CSS file
 const Header = ({ onSearch, onGenreChange}) => {
 
     const [genres, setGenres] = useState([]); // Initialize an empty array to store genres
-    const [searchTerm, setSearchTerm] = useState(''); // Initialize an empty string to store the search term
+    const [searchShow, setSearchShow] = useState(''); // Initialize an empty string to store the search term
     const navigate = useNavigate(); // Initialize the navigate function from react-router-dom
 
     //Fetch Genres from the API
@@ -22,7 +22,7 @@ const Header = ({ onSearch, onGenreChange}) => {
                 const uniqueGenres = [...new Set(allGenres)].sort(); // Remove duplicates by converting to a Set and sort the array
                 setGenres(uniqueGenres); // Update the genres state with the unique genres
             } catch(error) {
-                console.error("Error fetching Genres", error); // Log any errors that occur during the fetch
+                console.error("Try Again Later.", error); // Log any errors that occur during the fetch
             }
         };
         fetchGenres(); // Call the fetchGenres function to fetch the genres
@@ -31,7 +31,7 @@ const Header = ({ onSearch, onGenreChange}) => {
     //Function to handle the search Input
     const handleSearch = (e) => {
         const value = e.target.value;
-        setSearchTerm(value); // Update the search term state with the current input value
+        setSearchShow(value); // Update the search term state with the current input value
         if (onSearch) onSearch(value); // Call the onSearch function with the current search term
     }
 
@@ -42,7 +42,7 @@ const Header = ({ onSearch, onGenreChange}) => {
   };
 
     return (
-        <header>
+        <header className="header">
             <div className="header-container">
                 {/* Logo and Navigation Links */}
                 <div className="header-logo" onClick={() => navigate("/")}>
@@ -55,7 +55,7 @@ const Header = ({ onSearch, onGenreChange}) => {
                     <input 
                         type="text"
                         placeholder="Search for shows"
-                        value={searchTerm}
+                        value={searchShow}
                         onChange={handleSearch}
                         className="search-input"
                     />

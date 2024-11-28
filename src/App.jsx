@@ -9,8 +9,8 @@ import Favorites from './components/Pages/Favorites' // import Favorites compone
 
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState(""); // declare state variable searchTerm and initialize it with an empty string
-  const [selectedGenre, setSelectedGenre] = useState(""); // declare state variable selectedGenre and initialize it with an empty string
+  const [searchShow, setSearchTerm] = useState(""); // declare state variable searchTerm and initialize it with an empty string
+  const [selectGenre, setSelectedGenre] = useState(""); // declare state variable selectedGenre and initialize it with an empty string
 
   return (
     <Router>
@@ -18,16 +18,16 @@ const App = () => {
         onSearch={(term) => setSearchTerm(term)}
         onGenreChange={(genre) => setSelectedGenre(genre)}
       />
-      {/* <Sidebar /> */}
+      
       <Routes>
         <Route
           path="/"
           element={
-            <Home searchTerm={searchTerm} selectedGenre={selectedGenre} />
+            <Home searchTerm={searchShow} selectedGenre={selectGenre} />
           }
         />
-         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/show/:id" element={<ShowDetails />} /> 
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/show/:id" element={<ShowDetails />} />
       </Routes>
     </Router>
   );

@@ -74,8 +74,9 @@ const Home = ({ searchShow, selectGenre }) => {
                     <Link to={`/show/${show.id}`}>
                     <button>Watch</button>
                     </Link>
+                    <h4>Genre: {show.genres.join(', ')}</h4>
                     <h4>Seasons: {show.seasons}</h4>
-                    <h4>Last Updated: {new Date(show.update).toLocaleDateString()}</h4>
+                    <h4>Last Updated: {new Date(show.updated).toLocaleDateString()}</h4>
                 </div>
             ))}
             </div>

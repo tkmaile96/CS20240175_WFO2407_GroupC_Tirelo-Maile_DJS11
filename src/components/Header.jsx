@@ -6,6 +6,7 @@ import './Header.css'; // Import CSS file
 
 const Header = ({ onSearch, onGenreChange}) => {
 
+    // const { id } = useParams(); // Get the id from the URL
     const [genres, setGenres] = useState([]); // Initialize an empty array to store genres
     const [searchShow, setSearchShow] = useState(''); // Initialize an empty string to store the search term
     const navigate = useNavigate(); // Initialize the navigate function from react-router-dom
@@ -18,7 +19,7 @@ const Header = ({ onSearch, onGenreChange}) => {
                 const data = await response.json(); // Parse the response data as JSON
 
                 //Get the unique genres from the API
-                const allGenres = data.flatMap((show) => show.genre); // Flatten the array of genres
+                const allGenres = data.flatMap((show) => show.genres); // Flatten the array of genres
                 const uniqueGenres = [...new Set(allGenres)].sort(); // Remove duplicates by converting to a Set and sort the array
                 setGenres(uniqueGenres); // Update the genres state with the unique genres
             } catch(error) {
@@ -62,11 +63,11 @@ const Header = ({ onSearch, onGenreChange}) => {
                 </div>
 
                 {/* Filter By Genre */}
-                <div className="header-genre">
+        <div className="header-genre">
           <select onChange={handleGenreSelect} className="genre-select">
             <option value="">Select Genre</option>
-            {genres.map((genre, index) => (
-              <option key={`${genre}-${index}`} value={genre}>
+            {genres.map((genre) => (
+              <option key={genre} value={genre}>
                 {genre}
               </option>
                 

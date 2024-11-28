@@ -127,6 +127,11 @@ body {
 }
 
 .audio-player {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left:0;
+  right:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,8 +140,12 @@ body {
   
 }
 
+.audio-info h3 {
+  margin-bottom: 5px;
+}
+
 .audio-player audio {
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .close-button {

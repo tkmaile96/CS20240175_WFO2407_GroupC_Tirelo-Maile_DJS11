@@ -7,7 +7,7 @@ const ShowDetails = () => {
     const { id } = useParams(); // Get the id from the URL
     const [show, setShow] = useState(null); // Initialize a state to store the show details
     const [error, setError] = useState(false); // Initialize a state to store any error messages
-    const [playEpisode, setPlayEpisode] = useState(false); // Initialize a state to store whether to play an episode
+    const [playingEpisode, setPlayingEpisode] = useState(false); // Initialize a state to store whether to play an episode
 
 
     //Fetch the show details from the API
@@ -33,45 +33,45 @@ const ShowDetails = () => {
     </div>; // If the show data is not available
 
     // play an episode
-    const playingEpisode = (episode) => {
-        setPlayEpisode(episode); // Set the playEpisode state to true
+    const playEpisode = (episode) => {
+        setPlayingEpisode(episode); // Set the playEpisode state to true
     }
     return (
-        <div className="show-details">
-        <div className="details-container">
-          <div className="header">
-            <img
-              src={show.image}
-              alt={show.title}
-              className="show-image"
+  <div className="show-details">
+    <div className="details-container">
+     <div className="header">
+     <img
+       src={show.image}
+      alt={show.title}
+       className="show-image"
             />
-            <div className="info">
-              <h1>{show.title}</h1>
-              <p>{show.description}</p>
-              <p><strong>Total Seasons:</strong> {show.seasons.length}</p>
-              <p><strong>Last Updated:</strong> {new Date(show.updated).toLocaleDateString()}</p>
-            </div>
-          </div>
-          <div className="seasons">
-            <h2>Seasons</h2>
-            {show.seasons.map((season, seasonIndex) => (
-              <div key={seasonIndex} className="season">
-                <h3>{season.title}</h3>
-                <ul>
-                  {season.episodes.map((episode, episodeIndex) => (
-                    <li key={episodeIndex} className="episode">
-                      <span>{episode.title}</span>
-                      <button onClick={() => playEpisode(episode)} className="play-button">
-                        Play
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        {playingEpisode && (
+    <div className="info">
+       <h1>{show.title}</h1>
+         <p>{show.description}</p>
+        <p><strong>Total Seasons:</strong> {show.seasons.length}</p>
+        <p><strong>Last Updated:</strong> {new Date(show.updated).toLocaleDateString()}</p>
+    </div>
+</div>
+    <div className="seasons">
+     <h2>Seasons</h2>
+     {show.seasons.map((season, seasonIndex) => (
+      <div key={seasonIndex} className="season">
+     <h3>{season.title}</h3>
+    <ul>
+    {season.episodes.map((episode, episodeIndex) => (
+    <li key={episodeIndex} className="episode">
+      <span>{episode.title}</span>
+        <button onClick={() => playEpisode(episode)} className="play-button">
+           Play
+        </button>
+     </li>
+    ))}
+    </ul>
+  </div>
+   ))}
+ </div>
+</div>
+  {playingEpisode && (
           <div className="audio-player">
             <div className="audio-info">
               <h3>{playingEpisode.title}</h3>
@@ -80,12 +80,9 @@ const ShowDetails = () => {
                 Your browser does not support the audio element.
               </audio>
             </div>
-            <button
-              onClick={() => setPlayEpisode(null)}
-              className="close-button"
-            >
-              Close
-            </button>
+            <button onClick={() => setPlayingEpisode(null)} className="play-button">
+           Close
+        </button>
           </div>
         )}
       </div>

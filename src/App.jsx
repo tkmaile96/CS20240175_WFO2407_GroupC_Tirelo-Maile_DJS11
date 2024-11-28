@@ -9,14 +9,14 @@ import Favorites from './components/Pages/Favorites' // import Favorites compone
 
 
 const App = () => {
-  const [searchShow, setSearchTerm] = useState(""); // declare state variable searchTerm and initialize it with an empty string
-  const [selectGenre, setSelectedGenre] = useState(""); // declare state variable selectedGenre and initialize it with an empty string
+  const [searchShow, setSearchShow] = useState(""); // declare state variable searchTerm and initialize it with an empty string
+  const [selectGenre, setSelectGenre] = useState(""); // declare state variable selectedGenre and initialize it with an empty string
 
   return (
     <Router>
       <Header
-        onSearch={(term) => setSearchTerm(term)}
-        onGenreChange={(genre) => setSelectedGenre(genre)}
+        onSearch={(term) => setSearchShow(term)}
+        onGenreChange={(genre) => setSelectGenre(genre)}
       />
       
       <Routes>

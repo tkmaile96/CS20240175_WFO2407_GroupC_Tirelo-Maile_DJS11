@@ -57,7 +57,7 @@ const Home = ({ searchTerm, selectedGenre }) => {
     if (loading) return <div className="text-center">Loading...</div>;// display a loading message if the data is being fetched
 
     if (!filteredShows.length && !loading) {
-        return <div className="text-center">No shows found.</div>; // display a message if no shows are found
+        return <div className="text-center">Loading.....</div>; // display a message if no shows are found
     }
     
 

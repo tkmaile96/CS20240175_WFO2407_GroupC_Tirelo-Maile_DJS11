@@ -13,7 +13,7 @@ const ShowDetails = () => {
     useEffect(() => {
         const fetchShowDetails = async () => {
             try {
-                const response = await fetch(""); //API URL
+                const response = await fetch(`https://podcast-api.netlify.app/id/${id}`); //API URL
                 const data = await response.json(); // Parse the response data to json
                 setShow(data); // Update the show state with the fetched data
 
@@ -33,7 +33,58 @@ const ShowDetails = () => {
         setPlayEpisode(episode); // Set the playEpisode state to true
     }
     return (
-
+        <div className="show-details">
+        <div className="details-container">
+          <div className="header">
+            <img
+              src={show.image}
+              alt={show.title}
+              className="show-image"
+            />
+            <div className="info">
+              <h1>{show.title}</h1>
+              <p>{show.description}</p>
+              <p><strong>Total Seasons:</strong> {show.seasons.length}</p>
+              <p><strong>Last Updated:</strong> {new Date(show.updated).toLocaleDateString()}</p>
+            </div>
+          </div>
+          <div className="seasons">
+            <h2>Seasons</h2>
+            {show.seasons.map((season, seasonIndex) => (
+              <div key={seasonIndex} className="season">
+                <h3>{season.title}</h3>
+                <ul>
+                  {season.episodes.map((episode, episodeIndex) => (
+                    <li key={episodeIndex} className="episode">
+                      <span>{episode.title}</span>
+                      <button onClick={() => playEpisode(episode)} className="play-button">
+                        Play
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        {playingEpisode && (
+          <div className="audio-player">
+            <div className="audio-info">
+              <h3>{playingEpisode.title}</h3>
+              <audio controls autoPlay>
+                <source src={playingEpisode.file} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <button
+              onClick={() => setPlayEpisode(null)}
+              className="close-button"
+            >
+              Close
+            </button>
+          </div>
+        )}
+      </div>
     )
 };
 export default ShowDetails; // Export the component as the default export

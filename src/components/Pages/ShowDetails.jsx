@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'; // Import useState and useEf
 import { useParams } from 'react-router-dom'; // Import useParams from react-router-dom
 
 
+
 const ShowDetails = () => {
     const { id } = useParams(); // Get the id from the URL
     const [show, setShow] = useState(null); // Initialize a state to store the show details
@@ -26,7 +27,10 @@ const ShowDetails = () => {
     }), [id]; // The dependency array is set to [id] so that the effect is re-run
 
     if (error) return <div className="error">Error loading show details</div>; // If there's an error, display an error message
-    if (!show) return <div className="loading">Loading...</div>; // If the show data is not available
+    if (!show) return <div className="loading">
+        <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=790b7611gkosecep36x27bg9bz3hnuqenzj4us4aiawcsp65&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" />
+
+    </div>; // If the show data is not available
 
     // play an episode
     const playingEpisode = (episode) => {

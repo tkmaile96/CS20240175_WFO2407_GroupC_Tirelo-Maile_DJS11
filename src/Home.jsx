@@ -58,7 +58,7 @@ const Home = ({ searchShow, selectGenre }) => {
 
     if (!filteredShows.length && !loading) {
         return <div className="text-center">
-            <img src="https://media.giphy.com/media/nXf7yRHNGFPMOV79uz/giphy.gif?cid=ecf05e47d79i8hn1u95p4w1l61t595aze4e7a0e4spsp6zlq&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Cool GIF" />
+            <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=790b7611gkosecep36x27bg9bz3hnuqenzj4us4aiawcsp65&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Cool GIF" />
 
         </div>; // display a message if no shows are found
     }
@@ -71,7 +71,7 @@ const Home = ({ searchShow, selectGenre }) => {
                 <div key={show.id} className="show-card">
                     <img src={show.image} alt={show.title} />
                     <h3>{show.title}</h3>
-                    <Link to={`/shows/${show.id}`}>
+                    <Link to={`/show/${show.id}`}>
                     <button>Watch</button>
                     </Link>
                     <h4>Seasons: {show.seasons}</h4>

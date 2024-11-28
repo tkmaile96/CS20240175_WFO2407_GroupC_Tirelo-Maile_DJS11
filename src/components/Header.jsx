@@ -65,8 +65,8 @@ const Header = ({ onSearch, onGenreChange}) => {
                 <div className="header-genre">
           <select onChange={handleGenreSelect} className="genre-select">
             <option value="">Select Genre</option>
-            {genres.map((genre) => (
-              <option key={genre} value={genre}>
+            {genres.map((genre, index) => (
+              <option key={`${genre}-${index}`} value={genre}>
                 {genre}
               </option>
                 

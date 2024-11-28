@@ -4,8 +4,8 @@ import Home from "./Home"; // import Home component
 import "./components/Styles/global.css"; // import global.css
 import Header from "./components/Header"; // import Header component
 // import Sidebar from "./components/Sidebar"; // import Sidebar component
-// import ShowDetails from "./components/Pages/ShowDetails"; // import ShowDetails component
-// import Favorites from "./components/Pages/Favorites"; // import Favorites component
+import ShowDetails from "./components/Pages/ShowDetails"; // import ShowDetails component
+import Favorites from './components/Pages/Favorites' // import Favorites component
 
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
             <Home searchTerm={searchTerm} selectedGenre={selectedGenre} />
           }
         />
-        {/* <Route path="/favorites" element={<Favorites />} />
-        <Route path="/show/:id" element={<ShowDetails />} /> */}
+         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/show/:id" element={<ShowDetails />} /> 
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect from React
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import headphones from '../assets/streaming.png';  // logo image
+import User from '../assets/user.png' // user image
 import './Header.css'; // Import CSS file
 
 
@@ -84,6 +85,13 @@ const Header = ({ onSearch, onGenreChange}) => {
                     Favorites
                     </Link>
                 </div>
+                <div className="header-user-profile">
+                    <img src={User} alt="User" />
+                </div>
+            </div>
+            <div>
+                <button>A-Z</button>
+                <button>Z-A</button>
             </div>
         </header>
     );

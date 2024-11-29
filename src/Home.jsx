@@ -78,11 +78,11 @@ const Home = ({ searchShow, selectGenre }) => {
 
     return (
         <div className="home">
-            <div className="show-banner">
+            {/* <div className="show-banner">
                 <h1 className="show-title">Welcome to Podcastify <img src={PodcastImage} alt="podcast"  /> </h1>
                 <h4 className="show-subtitle">The Number one Podcasting Platform in the area</h4>
                 <p className="show-description">Sit back, grab your popcorns and enjoy the show.</p>
-            </div>
+            </div> */}
             <div className="sorting-buttons">
                 <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
                 <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>

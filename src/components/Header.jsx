@@ -102,7 +102,7 @@ const Header = ({ onSearch, onGenreChange}) => {
 
                 <button>Z-A</button>
 
-                <Link to="/Theme" className="change-theme">
+                <Link to="/" className="header-user-profile">
                     <img src={Theme} alt="change-theme" />
                 </Link>
             </div>

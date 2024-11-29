@@ -63,9 +63,21 @@
     color: #C0C0C0;
   }
   .header-user-profile img{
-    width: 30px;
-    height: 30px
+    width: 50px;
+    height: 50px
   }
   .header-arrange-buttons {
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+
+  .nav-link img {
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  }
+
+  .nav-link:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+    background: #333;
   }

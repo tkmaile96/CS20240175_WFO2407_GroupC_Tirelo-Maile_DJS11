@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';// import useState and useEffect from the React library
 import { Link } from 'react-router-dom';// import Link from the react-router-dom library
+import PodcastImage from '../src/assets/podcast.png'; // podacst image
 
 
 
@@ -67,9 +68,9 @@ const Home = ({ searchShow, selectGenre }) => {
     return (
         <div className="home">
             <div className="show-banner">
-                <h1 className="show-title">Welcome to Podcastify😁 </h1>
-                <h4>The Number one Podcasting Platform in the area</h4>
-                <p>Sit back, grab your popcorns and enjoy the shows.</p>
+                <h1 className="show-title">Welcome to Podcastify <img src={PodcastImage} alt="podcast"  /> </h1>
+                <h4 className="show-subtitle">The Number one Podcasting Platform in the area</h4>
+                <p className="show-description">Sit back, grab your popcorns and enjoy the show.</p>
             </div>
             <div className="show-grid">
             {filteredShows.map((show) => (

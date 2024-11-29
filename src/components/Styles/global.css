@@ -28,7 +28,28 @@ body {
     gap: 20px;
     padding: 20px;
   }
-  
+  .show-banner {
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+  }
+  .show-title {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+  }
+  .show-title img {
+    width: 30px;
+  }
+  .show-subtitle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .show-description {
+    text-align: center;
+    font-family:monospace;
+  }
   .show-card {
     border: 1px solid #ddd;
     padding: 10px;

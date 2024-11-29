@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';// import useState and useEffect from the React library
 import { Link } from 'react-router-dom';// import Link from the react-router-dom library
-import PodcastImage from '../src/assets/podcast.png'; // podacst image
+
 
 
 
@@ -12,6 +12,7 @@ const Home = ({ searchShow, selectGenre }) => {
     const [filteredShows, setFilteredShows] = useState([]); // initialise an empty array to store the filtered shows data
     const [loading, setLoading] = useState(false); // initialise a boolean to track the loading state
     const [sortInOrder, setSortInOrder] = useState(""); //  track the sort order
+    
 
     // Fetch the shows data from the API 
     useEffect(() => {
@@ -59,6 +60,10 @@ const Home = ({ searchShow, selectGenre }) => {
             filtered = filtered.sort((t, k) => t.title.localeCompare(k.title));
         } else if (sortInOrder === "descendingOrder") {
             filtered = filtered.sort((t, k) => k.title.localeCompare(t.title))
+        } else if (sortInOrder === "newUpdates") {
+            filtered = filtered.sort((t, k) => new Date(k.updated) - new Date(t.updated))
+        } else if (sortInOrder === "oldUpdates") {
+            filtered = filtered.sort((t, k) => new Date(t.updated)- new Date(k.updated))
         }
 
 
@@ -86,6 +91,10 @@ const Home = ({ searchShow, selectGenre }) => {
             <div className="sidebar">
                 <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
                 <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>
+                <br />
+                <button onClick={() => setSortInOrder("newUpdates")}>Newly Updated</button>
+                <button onClick={() => setSortInOrder("oldUpdates")}>Old Updates</button>
+
             </div>
             <div className="show-grid">
             {filteredShows.map((show) => (

@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Router>
       <Header
-        onSearch={(term) => setSearchShow(term)}
+        onSearch={(show) => setSearchShow(show)}
         onGenreChange={(genre) => setSelectGenre(genre)}
       />
       
@@ -23,7 +23,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <Home searchTerm={searchShow} selectedGenre={selectGenre} />
+            <Home searchShow={searchShow} selectGenre={selectGenre} />
           }
         />
         <Route path="/favorites" element={<Favorites />} />

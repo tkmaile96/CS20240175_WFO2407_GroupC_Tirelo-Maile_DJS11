@@ -32,6 +32,9 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    height: 40dvh;
+    margin-top: 3rem;
+
     
   }
   .show-title {

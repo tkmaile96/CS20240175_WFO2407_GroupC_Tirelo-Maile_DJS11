@@ -11,6 +11,7 @@ const Home = ({ searchShow, selectGenre }) => {
     const [shows, setShows] = useState([]); // initialise an empty array to store the shows data
     const [filteredShows, setFilteredShows] = useState([]); // initialise an empty array to store the filtered shows data
     const [loading, setLoading] = useState(false); // initialise a boolean to track the loading state
+    const [sortInOrder, setSortInOrder] = useState(""); //  track the sort order
 
     // Fetch the shows data from the API 
     useEffect(() => {
@@ -52,9 +53,18 @@ const Home = ({ searchShow, selectGenre }) => {
             show.genres.includes(Number(selectGenre))
             )
         }
+
+        // sort show alphabetically either from A-Z or Z-A
+        if (sortInOrder === "ascendingOrder") {
+            filtered = filtered.sort((t, k) => t.title.localeCompare(k.title));
+        } else if (sortInOrder === "descendingOrder") {
+            filtered = filtered.sort((t, k) => k.title.localeCompare(t.title))
+        }
+
+
         setFilteredShows(filtered); // update filtered shows
 
-    }, [searchShow, selectGenre, shows]); // run the effect whenever searchInput, selectedGenre
+    }, [searchShow, selectGenre, shows, sortInOrder]); // run the effect whenever searchInput, selectedGenre
     
     if (loading) return <div className="text-center">No Data is availabe at the Moment🥲</div>;// display a loading message if the data is being fetched
 

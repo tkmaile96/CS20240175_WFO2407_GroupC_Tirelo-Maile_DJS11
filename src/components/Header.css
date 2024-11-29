@@ -2,16 +2,17 @@
     background-color: #ffffff;
     padding: 0rem 2rem;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+    height: 20dvh;
   }
-  
-  .header-container {
+  .header-container{
     display: flex;
-    height: 100px;
+    flex-wrap: wrap;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
     gap: 1rem;
   }
-  
   .header-logo {
     display: flex;
     align-items: center;
@@ -91,6 +92,8 @@
     opacity: 0.8;
     background: #333;
   }
+  
+  
 
   /*---- THEME CHANGE -----*/
   
@@ -100,7 +103,7 @@
     color: #333;
   }
 
-  body.dark {
+  body.dark .header, body.dark .show-card, body.dark .sidebar {
     background-color: #333;
     color: #fff;
   }
@@ -121,30 +124,13 @@
 
 
   /*--- Responsive Design ---*/
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
+ 
+  @media (max-width: 480px) {
+    .header-logo img.logo{
+      width: 30px;
+      height: 30px;
     }
-
-    .header-logo {
-      margin-bottom: 10px;
-    }
-
-    .header-search,
-    .header-genre,
-    .header-links {
-      margin: 5px 0;
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-    }
-    .header-links {
-      gap: 10px;
-    }
-
-    .search-input,
-    .genre-select {
-      max-width: 250px;
+    .header-logo .app-name{
+      font-size: 12px;
     }
   }

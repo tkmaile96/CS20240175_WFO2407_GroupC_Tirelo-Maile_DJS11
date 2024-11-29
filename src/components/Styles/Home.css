@@ -23,10 +23,9 @@ body {
   }
   
   .show-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px
   }
   .show-banner {
     align-items: center;
@@ -56,7 +55,6 @@ body {
   .show-card {
     border: 1px solid #ddd;
     padding: 10px;
-    width: 200px;
     text-align: center;
   }
   

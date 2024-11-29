@@ -66,6 +66,7 @@ const Home = ({ searchShow, selectGenre }) => {
 
     return (
         <div className="home">
+            
             <div className="show-grid">
             {filteredShows.map((show) => (
                 <div key={show.id} className="show-card">

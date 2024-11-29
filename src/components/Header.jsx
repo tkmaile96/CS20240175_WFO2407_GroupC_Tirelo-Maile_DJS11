@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'; // Import useState and useEf
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import headphones from '../assets/streaming.png';  // logo image
 import User from '../assets/user.png' // user image
+import HomeImage from '../assets/home.png'; // home image
+import favoriteImage from '../assets/star.png' ; // favorite image
 import './Header.css'; // Import CSS file
 
 
@@ -79,10 +81,14 @@ const Header = ({ onSearch, onGenreChange}) => {
                 {/* Navigation Links */}
                 <div className="header-links">
                     <Link to="/" className="nav-link">
-                    Home
+                    <div className="header-user-profile">
+                        <img src={HomeImage} alt="Home-icon" />
+                    </div>
                     </Link>
                     <Link to="/favorites" className="nav-link">
-                    Favorites
+                    <div className="header-user-profile">
+                        <img src={favoriteImage} alt="fav-icon" />
+                    </div>
                     </Link>
                 </div>
                 <div className="header-user-profile">

@@ -24,7 +24,9 @@ const Favorites = () => {
     return (
         <div className="favorites">
             <h1>Favorites</h1>
+
             <ul>
+               
                 {favorites.map((episode) => (
                     <li key={episode.id}>
                         <h2>{episode.title}</h2>

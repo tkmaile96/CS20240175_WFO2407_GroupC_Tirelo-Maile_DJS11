@@ -69,27 +69,29 @@ const addToFavorites = (episodes) => {
         <p><strong>Last Updated:</strong> {new Date(show.updated).toLocaleDateString()}</p>
     </div>
 </div>
-    <div className="seasons">
-     <h2>Seasons</h2>
-     {show.seasons.map((season, seasonIndex) => (
-      <div key={seasonIndex} className="season">
-     <h3>{season.title}</h3>
-    <ul>
-    {season.episodes.map((episode, episodeIndex) => (
-    <li key={episodeIndex} className="episode">
-      <span>{episode.title}</span>
-        <button onClick={() => playEpisode(episode)} className="play-button">
-           Play
-        </button>
-        <button onClick={() => addToFavorites(episode)} className="fav-button">
-          Add to Favorites
-        </button>
-     </li>
-    ))}
-    </ul>
-  </div>
-   ))}
- </div>
+
+<div className="season">
+  <button onClick={prevSeason}>Preview</button>
+    <div className="season-details">
+      <h2>{currentSeason.title + 1}</h2>
+      {currentSeason.image && (
+        <img src={currentSeason.image} alt={currentSeason.title} className="season-image" />
+        
+      )}
+      <ul className="episode-list">
+      {currentSeason.episodes.map((episode, index) => (
+        <li key={index} className="episode"> 
+        <div>
+         <strong>Episode {index + 1}: </strong> {episode.title}
+        </div>
+        <button onClick={() => playEpisode(episode)}>Play</button>
+        <button onClick={() => addToFavorites(episode)}>Favorite</button>
+        </li>
+      ))}
+      </ul>
+    </div>
+    <button onClick={nextSeason}>Next</button>
+</div>
 </div>
   {playingEpisode && (
    <div className="audio-player">

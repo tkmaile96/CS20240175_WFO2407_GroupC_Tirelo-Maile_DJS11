@@ -82,6 +82,12 @@ body {
     background-color: #c0c0c0;
   }
 
+  .sorting-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+
   /*------SHOW DETAILS STYLING-------*/
 
   .show-details {

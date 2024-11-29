@@ -81,3 +81,32 @@
     opacity: 0.8;
     background: #333;
   }
+
+  /*--- Responsive Design ---*/
+  @media (max-width: 900px) {
+    .header-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .header-logo {
+      flex:1;
+      justify-content: flex-start;
+    }
+
+    .header-search {
+      flex: 2;
+      justify-content: center;
+
+    }
+
+    .header-genre {
+      flex:1;
+      justify-content: flex-end;
+    }
+
+    .header-arrange-buttons {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }

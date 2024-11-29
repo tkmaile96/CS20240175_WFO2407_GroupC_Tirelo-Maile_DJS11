@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'; // Import useParams from react-rou
 
 
 
+
 const ShowDetails = () => {
     const { id } = useParams(); // Get the id from the URL
     const [show, setShow] = useState(null); // Initialize a state to store the show details
@@ -19,12 +20,26 @@ const ShowDetails = () => {
                 setShow(data); // Update the show state with the fetched data
 
             }catch (error) {
-                console.error("Error fetching show details:", error);
+                console.error("Pleasse Try Again", error);
                 setError(true); // Set the error state to true if there's an error
             }
         };
         fetchShowDetails(); // Call the fetchShowDetails function
     }), [id]; // The dependency array is set to [id] so that the effect is re-run
+
+// Add to favorites
+const addToFavorites = (episodes) => {
+  const alreadyExist = JSON.parse(localStorage.getItem("favorites")) ||[]; // Check if the episode is already in the favorites list
+  const alreadyFavorite = alreadyExist.some((fav) => fav.id === episodes.id); 
+
+  if (!alreadyFavorite) {
+    const updatedFavorites = [...alreadyExist, episodes];
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
+    alert(`${episodes.title} added to favorites`)
+  } else {
+    alert(`${episodes.title} is already a favorite`)
+  }
+}
 
     if (error) return <div className="error">Error loading show details</div>; // If there's an error, display an error message
     if (!show) return <div className="loading">
@@ -36,6 +51,8 @@ const ShowDetails = () => {
     const playEpisode = (episode) => {
         setPlayingEpisode(episode); // Set the playEpisode state to true
     }
+
+    
     return (
   <div className="show-details">
     <div className="details-container">
@@ -63,6 +80,9 @@ const ShowDetails = () => {
       <span>{episode.title}</span>
         <button onClick={() => playEpisode(episode)} className="play-button">
            Play
+        </button>
+        <button onClick={() => addToFavorites(episode)} className="fav-button">
+          Add to Favorites
         </button>
      </li>
     ))}

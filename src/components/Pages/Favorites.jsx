@@ -14,7 +14,7 @@ const Favorites = () => {
     }, []); // The empty array means this effect will only run once
 
     const removeFavorite = (id) => {
-        const updatedFavorites = favorites.filter((show) => show.id !== id); // Filter out the show with the id that was clicked
+        const updatedFavorites = favorites.filter((fav) => fav.id !== id); // Filter out the show with the id that was clicked
         setFavorites(updatedFavorites); // Update the favorites state with the updated list of favorites
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites)); // Update the stored list of favorites in local storage
 
@@ -22,8 +22,16 @@ const Favorites = () => {
     if (favorites.length === 0) return <p> No favorites episodes yet...</p>
 
     return (
-        <div>
+        <div className="favorites">
             <h1>Favorites</h1>
+            <ul>
+                {favorites.map((episode) => (
+                    <li key={episode.id}>
+                        <h2>{episode.title}</h2>
+                        <button onClick={() => removeFavorite(episode.id)}>Remove from Favorites</button>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

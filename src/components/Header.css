@@ -111,30 +111,30 @@
 
 
   /*--- Responsive Design ---*/
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .header-container {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
     }
 
     .header-logo {
-      flex:1;
-      justify-content: flex-start;
+      margin-bottom: 10px;
     }
 
-    .header-search {
-      flex: 2;
-      justify-content: center;
-
-    }
-
-    .header-genre {
-      flex:1;
-      justify-content: flex-end;
-    }
-
-    .header-arrange-buttons {
+    .header-search,
+    .header-genre,
+    .header-links {
+      margin: 5px 0;
       width: 100%;
-      justify-content: space-around;
+      justify-content: center;
+      text-align: center;
+    }
+    .header-links {
+      gap: 10px;
+    }
+
+    .search-input,
+    .genre-select {
+      max-width: 250px;
     }
   }

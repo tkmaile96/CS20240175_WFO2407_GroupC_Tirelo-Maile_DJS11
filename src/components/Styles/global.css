@@ -194,3 +194,10 @@ body {
   
   margin: 100px auto 10px;
 }
+
+/*--- RESPONSIVE DESIGN ---*/
+@media (max-width: 768px) {
+  .show-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

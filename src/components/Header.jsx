@@ -103,14 +103,12 @@ const Header = ({ onSearch, onGenreChange}) => {
                         <img src={favoriteImage} alt="fav-icon" />
                     </div>
                     </Link>
-                </div>
-                <div className="header-arrange-buttons">
 
-                <button onClick={changeTheme} className="change-theme">
-    <img src={Theme} alt="theme-change" />
+                    <button onClick={changeTheme} className="change-theme">
+                         <img src={Theme} alt="theme-change" />
 
                 </button>
-            </div>
+                </div>
             </div>
            
         </header>

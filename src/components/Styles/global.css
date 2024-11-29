@@ -71,7 +71,7 @@ body {
     margin: 20px 0;
   }
   button {
-    background-color: #333;
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -79,9 +79,44 @@ body {
   }
 
   button:hover {
-    background-color: #c0c0c0;
+    background-color: #0162ca;
   }
 
+  .home {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .sidebar button:hover {
+    background-color: #0056b3;
+  }
 
   /*------SHOW DETAILS STYLING-------*/
 

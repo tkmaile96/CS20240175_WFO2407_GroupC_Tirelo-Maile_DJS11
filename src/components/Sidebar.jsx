@@ -1,29 +1,29 @@
-import react, { useState } from 'react';// Import useState from react
+import React, { useState } from "react";
+import "./Sidebar.css";
 
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false); // Declare a state variable and a function to update it
+  const [isOpen, setIsOpen] = useState(false);
+  
 
-const viewSidebar = () => setIsOpen(!isOpen) // Function to toggle the sidebar
+  const toggleSidebar = () => setIsOpen(!isOpen);
+ 
+  return (
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <button className="toggle-button" onClick={toggleSidebar}>
+        {isOpen ? "Close" : "Menu"}
+      </button>
+      <div className="sidebar-content">
+        <nav>
+          <ul>
+           <button>A-Z</button>
+          </ul>
+        </nav>
+        <footer>
+          <p>© 2024 Podcast App</p>
+        </footer>
+      </div>
+    </div>
+  );
+};
 
-
-    return (
-        <div className={`sidebar ${isOpen ? 'open' : ''}`}> 
-        <button onClick={viewSidebar}>
-        {isOpen ? "close" : "open"}
-        </button>
-        
-        <div>
-        <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
-        <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>
-        </div>
-
-        <div>
-            <button onClick={() => setSortInOrder("ascendingOrder")}>Newly Updated</button>
-            <button onClick={() => setSortInOrder("ascendingOrder")}>Old Updates</button>
-        </div>
-
-        </div>
-
-    )
-}
-export default Sidebar;// Export the component
+export default Sidebar;

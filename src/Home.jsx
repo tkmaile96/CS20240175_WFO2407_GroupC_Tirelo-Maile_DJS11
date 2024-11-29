@@ -84,7 +84,8 @@ const Home = ({ searchShow, selectGenre }) => {
                 <p className="show-description">Sit back, grab your popcorns and enjoy the show.</p>
             </div> */}
             <div className="sidebar">
-                
+                <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
+                <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>
             </div>
             <div className="show-grid">
             {filteredShows.map((show) => (

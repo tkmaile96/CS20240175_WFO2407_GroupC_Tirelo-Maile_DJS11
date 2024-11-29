@@ -92,8 +92,8 @@ const Home = ({ searchShow, selectGenre }) => {
                 <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
                 <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>
                 <br />
-                <button onClick={() => setSortInOrder("newUpdates")}>Newly Updated</button>
-                <button onClick={() => setSortInOrder("oldUpdates")}>Old Updates</button>
+                <button onClick={() => setSortInOrder("newUpdates")}>Old Updated</button>
+                <button onClick={() => setSortInOrder("oldUpdates")}>New Updates</button>
 
             </div>
             <div className="show-grid">

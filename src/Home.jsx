@@ -83,9 +83,8 @@ const Home = ({ searchShow, selectGenre }) => {
                 <h4 className="show-subtitle">The Number one Podcasting Platform in the area</h4>
                 <p className="show-description">Sit back, grab your popcorns and enjoy the show.</p>
             </div> */}
-            <div className="sorting-buttons">
-                <button onClick={() => setSortInOrder("ascendingOrder")}>Sort Z-A</button>
-                <button onClick={() => setSortInOrder("descendingOrder")}>Sort A-Z</button>
+            <div className="sidebar">
+                
             </div>
             <div className="show-grid">
             {filteredShows.map((show) => (

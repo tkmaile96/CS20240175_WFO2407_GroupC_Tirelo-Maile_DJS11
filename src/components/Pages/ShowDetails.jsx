@@ -9,6 +9,7 @@ const ShowDetails = () => {
     const [show, setShow] = useState(null); // Initialize a state to store the show details
     const [error, setError] = useState(false); // Initialize a state to store any error messages
     const [playingEpisode, setPlayingEpisode] = useState(false); // Initialize a state to store whether to play an episode
+    const [currentSeasonIndex, setCurrentSeasonIndex] = useState(0); // Initialize a state to store the current season index
     
 
     //Fetch the show details from the API
@@ -26,6 +27,17 @@ const ShowDetails = () => {
         };
         fetchShowDetails(); // Call the fetchShowDetails function
     }), [id]; // The dependency array is set to [id] so that the effect is re-run
+
+
+    // toggle through seasons
+    const nextSeason = () => {
+      setCurrentSeasonIndex((prevIndex) => (prevIndex + 1))
+    }
+    const prevSeason = () => {
+      setCurrentSeasonIndex((prevIndex) => 
+      (prevIndex - 1 + show.seasons.length) % show.seasons.length
+    )
+    }
 
 // Add to favorites
 const addToFavorites = (episodes) => {
@@ -51,6 +63,8 @@ const addToFavorites = (episodes) => {
     const playEpisode = (episode) => {
         setPlayingEpisode(episode); // Set the playEpisode state to true
     }
+
+    const currentSeason = show.seasons[currentSeasonIndex]
 
     
     return (

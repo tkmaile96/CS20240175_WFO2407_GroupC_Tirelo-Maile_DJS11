@@ -82,11 +82,6 @@ body {
     background-color: #c0c0c0;
   }
 
-  .sorting-buttons {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-  }
 
   /*------SHOW DETAILS STYLING-------*/
 

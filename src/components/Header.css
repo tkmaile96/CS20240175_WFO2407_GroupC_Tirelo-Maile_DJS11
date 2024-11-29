@@ -82,6 +82,9 @@
     background: #333;
   }
 
+  /*---- THEME CHANGE -----*/
+  
+
   /*--- Responsive Design ---*/
   @media (max-width: 900px) {
     .header-container {

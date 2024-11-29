@@ -14,6 +14,7 @@ const Header = ({ onSearch, onGenreChange}) => {
     const [genres, setGenres] = useState([]); // Initialize an empty array to store genres
     const [searchShow, setSearchShow] = useState(''); // Initialize an empty string to store the search term
     const navigate = useNavigate(); // Initialize the navigate function from react-router-dom
+    const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light"); // Get the theme from local storage or set it to light by default
 
     //Fetch Genres from the API
     useEffect(() => {
@@ -45,6 +46,17 @@ const Header = ({ onSearch, onGenreChange}) => {
     const genre = e.target.value;
     if (onGenreChange) onGenreChange(genre);
   };
+
+  //Change theme
+  const changeTheme = () => {
+    const currentTheme = theme === "light" ? "dark" : "light"; // Switch themes
+    setTheme(currentTheme); // Update the theme state with the new theme
+    localStorage.setItem("theme", currentTheme); // Save the new theme to local storage
+    document.body.className = currentTheme; // Update the body class to match the new theme
+  };
+  useEffect(() => {
+    document.body.className = theme; // Update the body class to match the current theme
+  }, [theme]); // The dependency array includes the theme state, so this effect will run whenever the theme is changed
 
     return (
         <header className="header">
@@ -98,9 +110,10 @@ const Header = ({ onSearch, onGenreChange}) => {
             </div>
             <div className="header-arrange-buttons">
 
-                <Link to="/" className="header-user-profile">
-                    <img src={Theme} alt="change-theme" />
-                </Link>
+                    <button onClick={changeTheme} className="change-theme">
+                        <img src={Theme} alt="theme-change" />
+
+                    </button>
             </div>
         </header>
     );

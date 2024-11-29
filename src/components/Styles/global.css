@@ -159,9 +159,7 @@ body {
     color: #333;
   }
 
-  .season {
-    margin-bottom: 20px;
-  }
+  
 
   .season h3 {
     font-size:18px;
@@ -174,12 +172,31 @@ body {
     padding: 0;
   }
 
+  .season {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .season-details {
+    text-align: center;
+    flex: 1;
+  }
+
+  .season-image {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+
 .episode {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+.episode-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .episode span {

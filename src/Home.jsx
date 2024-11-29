@@ -57,7 +57,7 @@ const Home = ({ searchShow, selectGenre }) => {
     if (loading) return <div className="text-center">No Data is availabe at the Moment🥲</div>;// display a loading message if the data is being fetched
 
     if (!filteredShows.length && !loading) {
-        return <div className="text-center">
+        return <div className="loading">
             <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=790b7611gkosecep36x27bg9bz3hnuqenzj4us4aiawcsp65&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Cool GIF" />
 
         </div>; // display a message if no shows are found
@@ -66,7 +66,11 @@ const Home = ({ searchShow, selectGenre }) => {
 
     return (
         <div className="home">
-            
+            <div className="show-banner">
+                <h1 className="show-title">Welcome to Podcastify😁 </h1>
+                <h4>The Number one Podcasting Platform in the area</h4>
+                <p>Sit back, grab your popcorns and enjoy the shows.</p>
+            </div>
             <div className="show-grid">
             {filteredShows.map((show) => (
                 <div key={show.id} className="show-card">

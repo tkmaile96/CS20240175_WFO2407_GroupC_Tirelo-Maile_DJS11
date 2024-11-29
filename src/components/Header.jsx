@@ -4,6 +4,7 @@ import headphones from '../assets/streaming.png';  // logo image
 import User from '../assets/user.png' // user image
 import HomeImage from '../assets/home.png'; // home image
 import favoriteImage from '../assets/star.png' ; // favorite image
+import Theme from '../assets/day-and-night.png'; // theme image
 import './Header.css'; // Import CSS file
 
 
@@ -95,9 +96,12 @@ const Header = ({ onSearch, onGenreChange}) => {
                     <img src={User} alt="User" />
                 </div>
             </div>
-            <div>
+            <div className="header-arrange-buttons">
                 <button>A-Z</button>
                 <button>Z-A</button>
+                <button className="header-user-profile">
+                    <img src={Theme} alt="theme" />
+                </button>
             </div>
         </header>
     );

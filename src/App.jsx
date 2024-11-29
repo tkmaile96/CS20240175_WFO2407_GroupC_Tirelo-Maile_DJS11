@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // import BrowserRouter and Routes from react-router-dom
 import Home from "./Home"; // import Home component
-import "./components/Styles/global.css"; // import global.css
+import "./components/Styles/Home.css"; // import Home.css
 import Header from "./components/Header"; // import Header component
 // import Sidebar from "./components/Sidebar"; // import Sidebar component
-import ShowDetails from "./components/Pages/ShowDetails"; // import ShowDetails component
+import Seasons from "./components/Pages/Seasons"; // import ShowDetails component
 import Favorites from './components/Pages/Favorites' // import Favorites component
 
 
@@ -27,7 +27,7 @@ const App = () => {
           }
         />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/show/:id" element={<ShowDetails />} />
+        <Route path="/show/:id" element={<Seasons />} />
       </Routes>
     </Router>
   );

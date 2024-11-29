@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect from React
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import headphones from '../assets/streaming.png';  // logo image
-import User from '../assets/user.png' // user image
 import HomeImage from '../assets/home.png'; // home image
 import favoriteImage from '../assets/star.png' ; // favorite image
 import Theme from '../assets/day-and-night.png'; // theme image

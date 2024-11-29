@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'; // Import useParams from react-rou
 
 
 
-const ShowDetails = () => {
+const Seasons = () => {
     const { id } = useParams(); // Get the id from the URL
     const [show, setShow] = useState(null); // Initialize a state to store the show details
     const [error, setError] = useState(false); // Initialize a state to store any error messages
@@ -14,7 +14,7 @@ const ShowDetails = () => {
 
     //Fetch the show details from the API
     useEffect(() => {
-        const fetchShowDetails = async () => {
+        const fetchSeasons = async () => {
             try {
                 const response = await fetch(`https://podcast-api.netlify.app/id/${id}`); //API URL
                 const data = await response.json(); // Parse the response data to json
@@ -25,7 +25,7 @@ const ShowDetails = () => {
                 setError(true); // Set the error state to true if there's an error
             }
         };
-        fetchShowDetails(); // Call the fetchShowDetails function
+        fetchSeasons(); // Call the fetchShowDetails function
     }), [id]; // The dependency array is set to [id] so that the effect is re-run
 
 
@@ -124,4 +124,4 @@ const addToFavorites = (episodes) => {
 </div>
     )
 };
-export default ShowDetails; // Export the component as the default export
+export default Seasons; // Export the component as the default export

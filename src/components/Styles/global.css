@@ -185,6 +185,8 @@ body {
   }
 
   .season-image {
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 250px;
     margin-bottom: 10px;

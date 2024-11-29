@@ -87,7 +87,7 @@ const addToFavorites = (episodes) => {
 <div className="season">
   <button onClick={prevSeason}>Preview</button>
     <div className="season-details">
-      <h2>{currentSeason.title + 1}</h2>
+      <h2>{currentSeason.title}</h2>
       {currentSeason.image && (
         <img src={currentSeason.image} alt={currentSeason.title} className="season-image" />
         
